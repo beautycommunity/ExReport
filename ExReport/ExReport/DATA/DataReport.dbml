@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataReport" Class="DataReportDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.10.202;Initial Catalog=DataReport;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DataReportConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.STCOKBC" Method="STCOKBC">
+    <ElementType Name="STCOKBCResult">
+      <Column Name="whcode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ABBNAME" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="whname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="dd" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MPCODE" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FULLNAME" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="qty" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="amt" Type="System.Decimal" DbType="Decimal(31,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

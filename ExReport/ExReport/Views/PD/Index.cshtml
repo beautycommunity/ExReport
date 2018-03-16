@@ -1,0 +1,56 @@
+﻿@model ExReport.Models.DateViewModels
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <center><h2> Report PD </h2></center>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-3 well">
+        <h2>ดึงรายงาน PO-PI</h2>
+        @using (Html.BeginForm("GetPoPi", "PD"))
+        {
+        <p>
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.Label("วันที้เริ่ม", new { @class = "control-label" })
+                    <br />
+                    @Html.Label("วันที้สิ้นสุด", new { @class = "control-label" })
+                </div>
+                <div class="col-md-6" align="left">
+                    @Html.EditorFor(m => m.condition.SDATE, new { @class = "form-control" })
+                    @Html.EditorFor(m => m.condition.EDATE, new { @class = "form-control" })
+                </div>
+            </div>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-default">ออกรายงาน <span class="glyphicon glyphicon-search"></span></button>
+        </p>
+        }
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    @*<div class="col-md-4 well">
+            <h2>BC</h2>
+            <p>Beauty Cottage</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">เพิ่มเติม &raquo;</a></p>
+        </div>*@
+    <div class="col-md-1">
+
+    </div>
+    @*<div class="col-md-3 well">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">เพิ่มเติม &raquo;</a></p>
+        </div>*@
+</div>
+
+

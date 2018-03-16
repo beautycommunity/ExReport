@@ -1,0 +1,75 @@
+﻿@model ExReport.Models.DateViewModels
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+<meta http-equiv="refresh" content="600">
+<div class="row">
+    <div class="col-md-12">
+        <center><h2> Report BC </h2></center>
+    </div>
+</div>
+<br />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="row">
+
+    <div class="col-md-3 well">
+        <h2>ดึงรายงานสต๊อก BC</h2>
+        <p>
+            <div class="row">
+                <div class="col-md-10">
+                    <br />
+                    @Html.Label("วันที้สิ้นสุดวันปัจจุบัน", new { @class = "control-label" })
+                </div>
+                <div class="col-md-2" align="left">
+                </div>
+            </div>
+        </p>
+        <p>
+            <a href="@Url.Action("GetStockBC","BC")" onClick="StockBC();" id="StockBC" class="btn btn-primary" align="left">ออกรายงาน <span class="glyphicon glyphicon-search"></span></a>
+            <button class="buttonload btn btn-primary" style="visibility:hidden" id="StockBC_Loading">
+                <i class="fa fa-refresh fa-spin"></i> Loading
+            </button>
+        </p>
+    </div>
+
+    <div class="col-md-1">
+
+    </div>
+    @*<div class="col-md-4 well">
+
+    </div>*@
+    <div class="col-md-1">
+
+    </div>
+
+
+
+    @*<button>Toggle between hiding and showing the paragraphs</button>
+
+        <p>This is a paragraph with little content.</p>
+        <p>This is another small paragraph.</p>*@
+
+
+    @*<input type="button" id="toggler" value="Toggler" onClick="action();" />
+        <input type="button" id="togglee" value="Togglee" />*@
+    @*style="display:none;"*@
+</div>
+
+
+<style>
+</style>
+
+
+@section scripts{
+    <script>
+        var hidden = false;
+        function StockBC() {
+            document.getElementById('StockBC').style.display = 'none';
+                document.getElementById('StockBC_Loading').style.visibility = 'visible';
+        }
+    </script>
+}
